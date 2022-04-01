@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DoorOpen : MonoBehaviour
+public class DoorOpen : PuzzleObject
 {
     bool open = false;
     float speed = 1f;
 
-    private void OnTriggerStay(Collider other)
+    public override void Activate()
     {
-        if (other.tag == "Player")
-        {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-            {
-                StartCoroutine(OpenDoor());
-            }
-        }
+        StartCoroutine(OpenDoor());
     }
 
     IEnumerator OpenDoor()
