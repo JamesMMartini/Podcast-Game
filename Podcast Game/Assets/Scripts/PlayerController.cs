@@ -6,11 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Camera gameCamera;
+    [SerializeField] LayerMask layerMask;
 
     public void OnInteract(InputValue value)
     {
-        Debug.Log("CLICKED");
-
         PlayerClick();
     }
 
@@ -19,8 +18,9 @@ public class PlayerController : MonoBehaviour
         // Raycast and find the object here
         RaycastHit ray;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out ray, 10f))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out ray, 10f, layerMask))
         {
+            Debug.Log("COLLIDED: " + ray.collider.gameObject.name);
             if (ray.collider.tag == "Interactable")
             {
                 ray.collider.gameObject.GetComponent<PuzzleObject>().Activate();

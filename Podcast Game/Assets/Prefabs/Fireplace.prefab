@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2534039649586511173}
   - component: {fileID: 5969529992530417808}
   - component: {fileID: 1058881992960479945}
+  - component: {fileID: 457738131538808437}
+  - component: {fileID: 8322577062138968822}
   m_Layer: 0
   m_Name: Logs
   m_TagString: Untagged
@@ -83,6 +85,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &457738131538808437
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147344827863807818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46851757, y: 0.26752445, z: 0.42613882}
+  m_Center: {x: 0.17800878, y: 0.11366559, z: 0.020538643}
+--- !u!114 &8322577062138968822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147344827863807818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196d6476c97f3184b886f182a33fe50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5209055524420933757
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +236,6 @@ GameObject:
   - component: {fileID: 4772005979851788992}
   - component: {fileID: 6554568636095502397}
   - component: {fileID: 7225348289864864934}
-  - component: {fileID: 3312007648276212378}
   m_Layer: 0
   m_Name: Fireplace
   m_TagString: Untagged
@@ -285,16 +311,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3312007648276212378
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8803950836483393446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1999999, y: 2.25, z: 0.54999995}
-  m_Center: {x: -0.59999996, y: 1.125, z: -0.27499998}

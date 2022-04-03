@@ -10,7 +10,18 @@ public class DoorOpen : PuzzleObject
 
     public override void Activate()
     {
-        StartCoroutine(OpenDoor());
+        activationTick++;
+
+        if (activationTick >= activationRequirement)
+        {
+            StartCoroutine(OpenDoor());
+
+            foreach (GameObject gameObject in activatedObjects)
+            {
+                //gameObject.GetComponent<PuzzleObject>().activated = true;
+                gameObject.GetComponent<PuzzleObject>().Activate();
+            }
+        }
     }
 
     IEnumerator OpenDoor()

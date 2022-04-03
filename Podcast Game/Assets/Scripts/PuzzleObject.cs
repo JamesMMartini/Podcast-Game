@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class PuzzleObject : MonoBehaviour
 {
-    public bool activated = false;
+    //public bool activated = false;
 
-    [SerializeField] GameObject[] activatedObjects;
+    public int activationTick;
+    public int activationRequirement;
+
+     
+    [SerializeField] public GameObject[] activatedObjects;
 
     public virtual void Activate()
     {
-        foreach (GameObject gameObject in activatedObjects)
+        activationTick++;
+
+        Debug.Log("Activated");
+
+        if (activationTick >= activationRequirement)
         {
-            gameObject.GetComponent<PuzzleObject>().activated = true;
-            gameObject.GetComponent<PuzzleObject>().Activate();
+            foreach (GameObject gameObject in activatedObjects)
+            {
+                //gameObject.GetComponent<PuzzleObject>().activated = true;
+                gameObject.GetComponent<PuzzleObject>().Activate();
+            }
         }
     }
 }
