@@ -42,21 +42,21 @@ public class DoorOpen : PuzzleObject
 
             open = true;
         }
-        else
-        {
-            Debug.Log("CLOSING");
-            // Rotate the door to 0 degrees on the y
-            float t = 0.0f;
-            Vector3 doorStart = transform.localRotation.eulerAngles;
-            Vector3 doorEnd = new Vector3(0, 0, 0);
-            while (t < 1.0f)
-            {
-                t += Time.deltaTime * speed * 2;
-                transform.localRotation = Quaternion.Euler(Vector3.Lerp(doorStart, doorEnd, t));
-                yield return null;
-            }
+        //else
+        //{
+        //    Debug.Log("CLOSING");
+        //    // Rotate the door to 0 degrees on the y
+        //    float t = 0.0f;
+        //    Vector3 doorStart = transform.localRotation.eulerAngles;
+        //    Vector3 doorEnd = new Vector3(0, 0, 0);
+        //    while (t < 1.0f)
+        //    {
+        //        t += Time.deltaTime * speed * 2;
+        //        transform.localRotation = Quaternion.Euler(Vector3.Lerp(doorStart, doorEnd, t));
+        //        yield return null;
+        //    }
 
-            open = false;
-        }
+        //    open = false;
+        //}
     }
 }

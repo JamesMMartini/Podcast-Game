@@ -27,4 +27,9 @@ public class PuzzleObject : MonoBehaviour
             }
         }
     }
+
+    public virtual void Deactivate()
+    {
+        activationTick--;
+    }
 }
